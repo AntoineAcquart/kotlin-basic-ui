@@ -1,11 +1,16 @@
 package com.example.basicui
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.basicui.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import splitties.toast.toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -17,9 +22,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+        binding.sendEmailFab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+            sendEmail("macha@chillcoding.com", "Hi", "Hello!")
         }
     }
 
@@ -36,6 +42,24 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun sendEmail(to: String, subject: String, msg: String) {
+        val emailIntent = Intent(Intent.ACTION_SEND)
+         emailIntent.run {
+             data = Uri.parse("mailto:")
+             type = "text/plain"
+             putExtra(Intent.EXTRA_EMAIL, arrayOf(to))
+             putExtra(Intent.EXTRA_SUBJECT, subject)
+             putExtra(Intent.EXTRA_TEXT, msg)
+         }
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.title_send_email)))
+        } catch (ex: ActivityNotFoundException) {
+            toast(R.string.toast_error_send_email)
+            Log.e(MainActivity::class.simpleName, "Error while sending email")
         }
     }
 }
