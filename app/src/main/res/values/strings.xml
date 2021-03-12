@@ -27,4 +27,6 @@
     <string name="title_share">Share</string>
     <string name="start_activity_text">Open a new activity</string>
     <string name="title_activity_secondary">SecondaryActivity</string>
+    <string name="receive_notification_text">Take the notification</string>
+    <string name="old_device_message">Sorry, your device is to old to support this feature.</string>
 </resources>

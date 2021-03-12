@@ -7,7 +7,26 @@
     tools:context=".SecondaryActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@mipmap/poussin_couteau"/>
+        android:id="@+id/poussin_couteau_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@mipmap/poussin_couteau"
+        app:layout_constraintBottom_toTopOf="@id/send_notification_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1"
+        />
+
+    <Button
+        android:id="@+id/send_notification_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/receive_notification_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/poussin_couteau_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="2"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
