@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Basic UI</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="txtFragment">"Hello Kotlin :) "</string>
+    <string name="toast_short_message">This is a short message in a toast</string>
+    <string name="naviguate">Naviguate</string>
+    <string name="display_toast">Display a short message</string>
+    <string name="display_toast_long">Display a long message</string>
+    <string name="toast_long_message">This a message in long toast</string>
+</resources>
