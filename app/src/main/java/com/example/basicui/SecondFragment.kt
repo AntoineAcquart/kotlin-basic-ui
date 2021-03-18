@@ -45,6 +45,10 @@ class SecondFragment : Fragment() {
         binding.startActivityButton.setOnClickListener(){
             requireContext().start<SecondaryActivity>()
         }
+
+        binding.nextToFragment3Button.setOnClickListener(){
+            findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
+        }
     }
 
 

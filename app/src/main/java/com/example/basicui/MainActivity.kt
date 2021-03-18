@@ -8,13 +8,14 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.basicui.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 import splitties.toast.toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -27,6 +28,9 @@ class MainActivity : AppCompatActivity() {
 //                    .setAction("Action", null).show()
             sendEmail("macha@chillcoding.com", "Hi", "Hello!")
         }
+
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

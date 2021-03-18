@@ -29,4 +29,6 @@
     <string name="title_activity_secondary">SecondaryActivity</string>
     <string name="receive_notification_text">Take the notification</string>
     <string name="old_device_message">Sorry, your device is to old to support this feature.</string>
+    <string name="third_fragment_label">Third Fragment</string>
+    <string name="back">Back to first fragment</string>
 </resources>
