@@ -50,4 +50,5 @@ dependencies {
     implementation("com.louiscad.splitties:splitties-alertdialog:$splitties_version")
     implementation("com.louiscad.splitties:splitties-activities:$splitties_version")
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.preference:preference:1.1.1'
 }

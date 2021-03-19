@@ -1,17 +1,21 @@
 package com.example.basicui
 
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.preference.PreferenceManager
 import com.example.basicui.databinding.ActivityMainBinding
-import com.google.android.material.snackbar.Snackbar
 import splitties.toast.toast
 
 class MainActivity : AppCompatActivity() {
@@ -27,12 +31,12 @@ class MainActivity : AppCompatActivity() {
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                    .setAction("Action", null).show()
             sendEmail("macha@chillcoding.com", "Hi", "Hello!")
+
         }
 
-
+        PreferenceManager.setDefaultValues(this, R.xml.fragment_settings, false)
 
     }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)

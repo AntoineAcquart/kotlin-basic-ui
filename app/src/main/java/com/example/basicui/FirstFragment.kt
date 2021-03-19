@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDialog
 import androidx.appcompat.app.AppCompatDialogFragment
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.basicui.databinding.FragmentFirstBinding
 import splitties.alertdialog.*
@@ -45,6 +46,10 @@ class FirstFragment : Fragment() {
         binding.naviguateFragmentButton.setOnClickListener(){
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
+        binding.settingsFab.setOnClickListener(){
+            findNavController().navigate(R.id.action_FirstFragment_to_settingsFragment)
+        }
+
     }
     private fun showAlertDialog() {
         requireContext().alertDialog {

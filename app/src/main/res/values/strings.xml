@@ -31,4 +31,6 @@
     <string name="old_device_message">Sorry, your device is to old to support this feature.</string>
     <string name="third_fragment_label">Third Fragment</string>
     <string name="back">Back to first fragment</string>
+    <string name="label_sound">Sound</string>
+    <string name="pref_sound">PREF_SOUND</string>
 </resources>
